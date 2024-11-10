@@ -26,9 +26,8 @@ jobs:
       - name: Frogbot Scan
         uses: jfrog/frogbot@v2.23.2
         env:
-          JF_URL: ${{ secrets.JFROG_URL }}
-          JF_USER: ${{ secrets.JFROG_USER }} 
-          JF_PASSWORD: ${{ secrets.JFROG_PASSWORD }}
+          JF_URL: ${{ secrets.JF_URL }}
+          JF_PASSWORD: ${{ secrets.JF_ACCESS_TOKEN }}
           JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           scan-type: 'dependency'
