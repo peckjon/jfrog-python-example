@@ -13,30 +13,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: Install JFrog CLI
-        run: |
-          curl -fL https://install-cli.jfrog.io | sh
-          jf setup --url=${{ secrets.JFROG_URL }} --user=${{ secrets.JFROG_USER }} --password=${{ secrets.JFROG_PASSWORD }}
-
       - name: Frogbot Scan
         uses: jfrog/frogbot@v2.23.2
-        env:
-          JF_URL: ${{ secrets.JF_URL }}
-          JF_PASSWORD: ${{ secrets.JF_ACCESS_TOKEN }}
-          JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          scan-type: 'dependency'
-          working-directory: '.'
-          project-name: 'app-service-hello-world'
-
-      - name: Upload Scan Results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: frogbot-report
-          path: frogbot-report.json
