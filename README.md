@@ -1,6 +1,6 @@
 # GitHub Actions and JFrog Platform Integration Example
 
-This repository contains an example of how to integrate GitHub Actions with the JFrog Platform. The purpose of this repository is to provide an example of how to build and deploy an NPM package to the JFrog platform using GitHub Actions.
+This repository contains an example of how to integrate GitHub Actions with the JFrog Platform. The purpose of this repository is to provide an example of how to build and deploy a PyPi package to the JFrog platform using GitHub Actions.
 
 ## Getting Started
 
@@ -11,7 +11,7 @@ Once you have a JFrog account, you can copy this template repository to your own
 
 ## Integrating GitHub Actions with JFrog Platform
 
-This repository contains the necessary files to build and deploy an NPM package to the JFrog platform using GitHub Actions.
+This repository contains the necessary files to build and deploy a PyPi package to the JFrog platform using GitHub Actions.
 
 ## Contributing
 
