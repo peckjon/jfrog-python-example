@@ -15,3 +15,5 @@ jobs:
 
       - name: Frogbot Scan
         uses: jfrog/frogbot@v2.23.2
+        env:
+          JF_URL: ${{ secrets.JF_URL }}
